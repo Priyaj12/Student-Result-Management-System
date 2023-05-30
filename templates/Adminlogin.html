@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Lodin</title>
+    <link rel="stylesheet" href="/static/Style.css">
+    <style>
+        input[type=submit]{
+            border-radius: 10px;
+            width: 100px;
+            height: 45px;
+            margin: 45px ;
+            font-size: 20px ;
+            margin-left: 110px;
+        }
+        #msgdiv{
+            font-size: 30px;
+            color:red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="body1">
+    <div id="msgdiv">{{ msg }}</div>
+    <div class="studentlogin">
+        <h1>Admin Login</h1>
+        <form method="post">
+            <p>Enter Name</p>
+            <input type="text" name="User" placeholder="Enter Name" autocomplete="off" >
+            <p>Enter Password</p>
+            <input type="Password" name="Password" placeholder="Enter Password"><br>
+            <input type="submit"></input>
+        </form>
+    </div>
+</body>
+</html>

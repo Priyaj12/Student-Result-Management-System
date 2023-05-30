@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Generate Result</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet'href='/static/AddResult.css'>
+    <style>
+        #msgdiv{
+            font-size: 25px;
+            color:red;
+        }
+    </style>
+</head>
+<body class="body3" >
+    <div id="msgdiv">{{ msg }}</div>    
+    <table class="t3">
+        <tr>
+            <th class="th1"><a href="{{ url_for('sem1') }}" >Add Student/Result</a></th>
+            <th class="th1"><a href="{{ url_for('viewsem1') }}" >View Record</a></th>
+        </tr>
+    </table>
+    <a href="{{url_for('selectsem')}}" >Back</a>
+    <h3>Add Student</h3>
+    <div class="container">
+        <form method="post">
+            <div class="add-details">
+                <div class="add">
+                    <span class="details">Enter Student Name :</span><br>
+                    <input type="text" name="sname" placeholder="Student Name" autocomplete="off" >
+                </div>
+                <div class="add">
+                    <span class="details">Enter Roll Number :</span><br>
+                    <input type="text" name="rollnum" placeholder="Roll Number" autocomplete="off" >
+                </div> 
+            </div>
+            <div class="gender-d">Gender 
+                <div class="gender">
+                    <input type="radio" name="gender" value="Male">Male &nbsp; &nbsp;
+                    <input type="radio" name="gender" value="Female">Female 
+                </div>
+            </div>
+            <h4>Add Result</h4>
+            <div class="result-details">
+                <div class="sub">
+                    <span class="details">Imperative Programming :</span><br>
+                    <input type="text" name="ip" placeholder="Imperative Programming" >
+                </div>
+                <div class="sub">
+                    <span class="details">Imperative Programming Practical :</span><br>
+                    <input type="text" name="ippract" placeholder="Imperative Programming Practical">
+                </div>
+                <div class="sub">
+                    <span class="details">Imperative Programming Internal :</span><br>
+                    <input type="text" name="ipint" placeholder="Imperative Programming Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Digital Electronics :</span><br>
+                    <input type="text" name="de" placeholder="Digital Electronics" >
+                </div> 
+                <div class="sub">
+                    <span class="details">Digital Electronics Practical :</span><br>
+                    <input type="text" name="depract" placeholder="Digital Electronics Practical" >
+                </div>
+                <div class="sub">
+                    <span class="details">Digital Electronics Internal :</span><br>
+                    <input type="text" name="deint" placeholder="Digital Electronics Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Operating Systems :</span><br>
+                    <input type="text" name="os" placeholder="Operating Systems" >
+                </div>
+                <div class="sub">
+                    <span class="details">Operating Systems Practical :</span><br>
+                    <input type="text" name="ospract" placeholder="Operating Systems Practical" >
+                </div>
+                <div class="sub">
+                    <span class="details">Operating Systems Internal :</span><br>
+                    <input type="text" name="osint" placeholder="Operating Systems Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Discrete Mathematics :</span><br>
+                    <input type="text" name="dm" placeholder="Discrete Mathematics" >
+                </div>
+                <div class="sub">
+                    <span class="details">Discrete Mathematics Practical :</span><br>
+                    <input type="text" name="dmpract" placeholder="Discrete Mathematics Practical" >
+                </div>
+                <div class="sub">
+                    <span class="details">Discrete Mathematics Internal :</span><br>
+                    <input type="text" name="dmint" placeholder="Discrete Mathematics Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Communication Skills :</span><br>
+                    <input type="text" name="cs" placeholder="Communication Skills" >
+                </div>
+                <div class="sub">
+                    <span class="details">Communication Skills Practical :</span><br>
+                    <input type="text" name="cspract" placeholder="Communication Skills Practical" >
+                </div>
+                <div class="sub">
+                    <span class="details">Communication Skills Internal :</span><br>
+                    <input type="text" name="csint" placeholder="Communication Skills Internal" >
+                </div>
+            </div>
+            <div class="btn">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

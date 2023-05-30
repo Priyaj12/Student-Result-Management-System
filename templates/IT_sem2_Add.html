@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Generate Result</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet'href='/static/AddResult.css'>
+    <style>
+        #msgdiv{
+            font-size: 25px;
+            color:red;
+        }
+    </style>
+</head>
+<body class="body3" >
+    <div id="msgdiv">{{ msg }}</div> 
+    <table class="t3">
+        <tr>
+            <th class="th1"><a href="{{ url_for('sem2') }}" >Add Student/Result</a></th>
+            <th class="th1"><a href="{{ url_for('viewsem2') }}" >View Record</a></th>
+        </tr>
+    </table>
+    <a href="{{url_for('selectsem')}}" >Back</a>
+    <h3>Add Student</h3>
+    <div class="container">
+        <form method="post">
+            <div class="add-details">
+                <div class="add">
+                    <span class="details">Enter Student Name :</span><br>
+                    <input type="text" name="sname" placeholder="Student Name" autocomplete="off" >
+                </div>
+                <div class="add">
+                    <span class="details">Enter Roll Number :</span><br>
+                    <input type="text" name="rollnum" placeholder="Roll Number" autocomplete="off" >
+                </div> 
+            </div>
+            <div class="gender-d">Gender 
+                <div class="gender">
+                    <input type="radio" name="gender" value="Male">Male &nbsp; &nbsp;
+                    <input type="radio" name="gender" value="Female">Female 
+                </div>
+            </div>
+            <h4>Add Result</h4>
+            <div class="result-details">
+                <div class="sub">
+                    <span class="details">Object Oriented Programming :</span><br>
+                    <input type="text" name="oop" placeholder="Object Oriented Programming" >
+                </div>
+                <div class="sub">
+                    <span class="details">Object Oriented Programming Practical :</span><br>
+                    <input type="text" name="ooppract" placeholder="Object Oriented Programming Practical">
+                </div>
+                <div class="sub">
+                    <span class="details">Object Oriented Programming Internal :</span><br>
+                    <input type="text" name="oopint" placeholder="Object Oriented Programming Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Microprocessor Architecture :</span><br>
+                    <input type="text" name="ma" placeholder="Microprocessor Architecture" >
+                </div> 
+                <div class="sub">
+                    <span class="details">Microprocessor Architecture Practical :</span><br>
+                    <input type="text" name="mapract" placeholder="Microprocessor Architecture Practical" >
+                </div>
+                <div class="sub">
+                    <span class="details">Microprocessor Architecture Internal :</span><br>
+                    <input type="text" name="maint" placeholder="Microprocessor Architecture Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Web Programming :</span><br>
+                    <input type="text" name="wp" placeholder="Web Programming" >
+                </div>
+                <div class="sub">
+                    <span class="details">Web Programming Practical :</span><br>
+                    <input type="text" name="wppract" placeholder="Web Programming Practical" >
+                </div>
+                <div class="sub">
+                    <span class="details">Web Programming Internal :</span><br>
+                    <input type="text" name="wpint" placeholder="Web Programming Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Numerical and Statistical Methods :</span><br>
+                    <input type="text" name="nsm" placeholder="Numerical and Statistical Methods" >
+                </div>
+                <div class="sub">
+                    <span class="details">Numerical and Statistical Methods Practical :</span><br>
+                    <input type="text" name="nsmpract" placeholder="Numerical and Statistical Methods Practical" >
+                </div>
+                <div class="sub">
+                    <span class="details">Numerical and Statistical Methods Internal :</span><br>
+                    <input type="text" name="nsmint" placeholder="Numerical and Statistical Methods Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Green Computing :</span><br>
+                    <input type="text" name="gc" placeholder="Green Computing" >
+                </div>
+                <div class="sub">
+                    <span class="details">Green Computing Practical :</span><br>
+                    <input type="text" name="gcpract" placeholder="Green Computing Practical" >
+                </div>
+                <div class="sub">
+                    <span class="details">Green Computing Internal :</span><br>
+                    <input type="text" name="gcint" placeholder="Green Computing Internal" >
+                </div>
+            </div>
+            <div class="btn">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

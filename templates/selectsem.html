@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>selectsem</title>
+        <link rel="stylesheet" href="/static/selectsem.css">
+        <style>
+            #msgdiv{
+            font-size: 30px;
+            color:white;
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body class="body2">
+        <a href="{{url_for('logout')}}" >Logout</a>
+        <div id="msgdiv">{{ msg }}</div>
+        <table class="t1">
+            <tr>
+                <th colspan="6" class="thh1">BSC-IT</th>
+            </tr>
+            <tr>
+                <th colspan="6">BSC-IT First Year</th>
+            </tr>
+            <tr>
+                <td>
+                    <button><a href="{{ url_for('sem1')}}" >Sem I</a></button>
+                </td>
+                <td>
+                    <button><a href="{{ url_for('sem2')}}">Sem II</a></button>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="6" >BSC-IT Second Year</th>
+            </tr>
+            <tr>
+                <td>
+                    <button><a href="{{ url_for('sem3')}}">Sem III</a></button>
+                </td>
+                <td>
+                    <button><a href="{{ url_for('sem4')}}">Sem IV</a></td></button>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="6" >BSC-IT Third Year</th>
+            </tr>
+            <tr>
+                <td>
+                    <button><a href="{{ url_for('sem5')}}">Sem V</a></button>
+                </td>
+                <td>
+                    <button><a href="{{ url_for('sem6')}}">Sem VI</a></button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

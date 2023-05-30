@@ -1,0 +1,104 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.body2{
+    padding: 25px;
+    background: url(Image1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Table One */
+.t1{
+    border-style: solid ;
+    border-radius: 0px;
+    border-color: black;
+    height: 400px;
+    width: 600px;
+    margin-top: 10%;
+    margin-left: 29%;
+}
+
+.body2 .t1 tr td button{
+    background-color: blue;
+    border-radius: 10px;
+    height: 25px;
+    width: 70px;
+    border-style: none;
+}
+.body2 .t1 tr td button:hover{
+    background-color: transparent;
+    border-radius: 12px;
+    height: 25px;
+    width: 70px;
+    border-style: solid;
+    border-color: white;
+}
+.body2 .t1 tr td button a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.body2 .t1 tr th {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.body2 .t1 tr td{
+    text-align: center;
+}
+
+.body2 .t1 tr .thh1 {
+    border-style: solid;
+    border-radius: 0px;
+    border-color: black;
+    color: white;
+    font-size: 20px;
+}
+
+/* Table Two */
+.t2{
+
+    border-style: solid ;
+    border-radius: 0px;
+    border-color: black;
+    height: 200px;
+    width: 600px;
+    margin-top: 5%;
+    margin-left: 25%;
+}
+
+.body2 .t2 tr td button{
+    background-color: blue;
+    border-radius: 10px;
+    height: 25px;
+    width: 70px;
+    border-style: none;
+}
+.body2 .t2 tr td button:hover{
+    background-color: transparent;
+    border-radius: 12px;
+    height: 25px;
+    width: 70px;
+    border-style: solid;
+    border-color: white;
+}
+.body2 .t2 tr td button a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.body2 .t2 tr th {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black
+}
+.body2 .t2 tr td{
+    text-align: center;
+}
+.body2 .t2 tr .thh1 {
+    border-style: solid;
+    border-radius: 0px;
+    border-color: black;
+    color: white;
+    font-size: 20px;
+}

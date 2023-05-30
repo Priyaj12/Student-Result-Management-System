@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester V</title>
+    <style>
+        body {
+			font-family: Arial, sans-serif;
+			margin: 100px;
+			padding: 0;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			background-color: #fff;
+		}
+        .container p{
+            text-align: center;
+            font-size: 25px;
+        }
+        .container .course{
+            margin-top: 30px;
+            margin-left: 30px;
+            font-size: 15px;
+        }
+        .container .name{
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        .container .rollnum{
+            margin-top: -20px;
+            margin-left: 600px;
+        }
+        .container .gender{
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+        .container .tb{
+            margin-top: 30px;
+            margin-left: 40px;
+        }
+        .container .tb table{
+            width: 700px;
+            height: 300px;
+        }
+        .container .tb table td{
+            text-align: center;
+        }
+        button{
+            background: rgb(94, 94, 206);
+            width: 150px ;
+            height: 40px;
+            text-align: center;
+            color: #fff;
+            margin-top: 20px;
+            margin-left: 45% ;
+        }
+
+    </style>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+        function myfun(){
+            function capture() {
+    const captureElement = document.querySelector('#capture') // Select the element you want to capture. Select the <body> element to capture full page.
+    html2canvas(captureElement)
+        .then(canvas => {
+            canvas.style.display = 'none'
+            document.body.appendChild(canvas)
+            return canvas
+        })
+        .then(canvas => {
+            const image = canvas.toDataURL('image/png')
+            const a = document.createElement('a')
+            a.setAttribute('download', 'Result_semV.png')
+            a.setAttribute('href', image)
+            a.click()
+            canvas.remove()
+        })
+}
+
+const btn = document.querySelector('#btn')
+btn.addEventListener('click', capture)}
+</script>
+
+    </style>
+</head>
+<body>
+    <div id="capture" class="container">
+        <div>
+            <p><b>Consolidated Report After Result Porocessiong</b></p>
+        </div>{% for row in rows%}
+        <div class="course"><b>Course: : BACHELOR OF SCIENCE (INFORMATION TECHNOLOGY)-5</b></div>  
+        <div class="name">Name: {{ row.sname }}</div>
+        <div class="rollnum">Roll Number: {{ row.rollnum }}</div>
+        <div class="gender">Gender: {{ row.gender }}</div>     {% endfor %}   
+        <div class="tb" >
+            <table>
+                <thead>
+                    <th>Subjects</th>
+                    <th>Theory</th>
+                    <th>Internal</th>
+                    <th>Practical</th>
+                    <th>Total</th>
+                    <th>Percentage</th>
+                    <th>Grade</th>                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Software Project Management</td>
+                        {% for row in rows %}
+                        <td>{{ row.spm }}</td>
+                        <td>{{ row.pdpract }}</td>
+                        <td>{{ row.spmint }}</td>     
+                        {% endfor %}                   
+                    </tr>
+                    <tr>
+                        <td>Internet of Things</td>
+                        {% for row in rows %}
+                        <td>{{ row.iot }}</td>
+                        <td>{{ row.iotpract }}</td>
+                        <td>{{ row.iotint }}</td>     
+                        {% endfor %}  
+                    </tr>
+                    <tr>
+                        <td>Advanced Web Programming</td>
+                        {% for row in rows %}
+                        <td>{{ row.awp }}</td>
+                        <td>{{ row.awppract }}</td>
+                        <td>{{ row.awpint }}</td>
+                        <td>{{ row.total }}</td>
+                        <td>{{ row.percentage }}%</td>
+                        <td>{{ row.grade }}</td>
+                        {% endfor %} 
+                    </tr>
+                    <tr>
+                        <td>Linux System Administration</td>
+                        {% for row in rows %}
+                        <td>{{ row.lsa }}</td>
+                        <td>{{ row.lsapract }}</td>
+                        <td>{{ row.lsaint }}</td>     
+                        {% endfor %}                        
+                    </tr>
+                    <tr>
+                        <td>Enterprise Java</td>
+                        {% for row in rows %}
+                        <td>{{ row.ej }}</td>
+                        <td>{{ row.ejpract }}</td>
+                        <td>{{ row.ejint }}</td>     
+                        {% endfor %}                        
+                    </tr>
+                </tbody>
+            </table>            
+        </div>
+    </div>
+    <button onclick="myfun()" id="btn">Download</button>
+</body>
+</html>

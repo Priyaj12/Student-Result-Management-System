@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Generate Result</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet'href='/static/AddResult.css'>
+    <style>
+        #msgdiv{
+            font-size: 25px;
+            color:red;
+        }
+    </style>
+</head>
+<body class="body3" >
+    <div id="msgdiv">{{ msg }}</div>
+    <table class="t3">
+        <tr>
+            <th class="th1"><a href="{{ url_for('sem3') }}" >Add Student/Result</a></th>
+            <th class="th1"><a href="{{ url_for('viewsem3') }}" >View Record</a></th>
+        </tr>
+    </table>
+    <a href="{{url_for('selectsem')}}" >Back</a>
+    <h3>Add Student</h3>
+    <div class="container">
+        <form method="post">
+            <div class="add-details">
+                <div class="add">
+                    <span class="details">Enter Student Name :</span><br>
+                    <input type="text" name="sname" placeholder="Student Name" autocomplete="off" >
+                </div>
+                <div class="add">
+                    <span class="details">Enter Roll Number :</span><br>
+                    <input type="text" name="rollnum" placeholder="Roll Number" autocomplete="off" >
+                </div> 
+            </div>
+            <div class="gender-d">Gender 
+                <div class="gender">
+                    <input type="radio" name="gender" value="Male">Male &nbsp; &nbsp;
+                    <input type="radio" name="gender" value="Female">Female 
+                </div>
+            </div>
+            <h4>Add Result</h4>
+            <div class="result-details">
+                <div class="sub">
+                    <span class="details">Python Programming :</span><br>
+                    <input type="text" name="py" placeholder="Python Programming" required>
+                </div>
+                <div class="sub">
+                    <span class="details">Python Programming practical :</span><br>
+                    <input type="text" name="pypract" placeholder="Python Programming practical" required>
+                </div>
+                <div class="sub">
+                    <span class="details">Python Internal :</span><br>
+                    <input type="text" name="pyint" placeholder="Python Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Data Structures :</span><br>
+                    <input type="text" name="ds" placeholder="Data Structures" required>
+                </div>
+                <div class="sub">
+                    <span class="details">Data Structures practical :</span><br>
+                    <input type="text" name="dspract" placeholder="Data Structures practical" required>
+                </div>
+                <div class="sub">
+                    <span class="details">Data Structures Internal :</span><br>
+                    <input type="text" name="dsint" placeholder="Data Structures Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Computer Networks :</span><br>
+                    <input type="text" name="cn" placeholder="Computer Networks" required>
+                </div>
+                <div class="sub">
+                    <span class="details">Computer Networks practical :</span><br>
+                    <input type="text" name="cnpract" placeholder="Computer Networks practical" required>
+                </div>
+                <div class="sub">
+                    <span class="details">Computer Networks Internal :</span><br>
+                    <input type="text" name="cnint" placeholder="Computer Networks Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Database Management Systems :</span><br>
+                    <input type="text" name="dbms" placeholder="Database Management Systems" required>
+                </div>
+                <div class="sub">
+                    <span class="details">Database Management Systems practical :</span><br>
+                    <input type="text" name="dbmspract" placeholder="Database Management Systems practical" required>
+                </div><div class="sub">
+                    <span class="details">Datbase Management Systems Internal :</span><br>
+                    <input type="text" name="dbmsint" placeholder="Database Management Systems Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Applied Mathematics :</span><br>
+                    <input type="text" name="am" placeholder="Applied Mathematics" required>
+                </div>
+                <div class="sub">
+                    <span class="details">Mobile Programing practical :</span><br>
+                    <input type="text" name="mppract" placeholder="Mobile Programing practical" required>
+                </div>
+                <div class="sub">
+                    <span class="details">Applied Mathematics Internal :</span><br>
+                    <input type="text" name="amint" placeholder="Applied Mathematics Internal" >
+                </div>
+            </div>
+            <div class="btn">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

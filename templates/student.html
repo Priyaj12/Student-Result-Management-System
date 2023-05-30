@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/Style.css">
+    <style>
+        input[type=submit]{
+            border-radius: 10px;
+            width: 100px;
+            height: 45px;
+            margin: 45px ;
+            font-size: 20px ;
+            margin-left: 110px;
+        }
+        #msgdiv{
+            font-size: 30px;
+            color:red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="body1">
+    <div id="msgdiv">{{ msg }}</div>
+    <div class="studentlogin">
+        <h1>Student Login</h1>
+        <form method="post">
+            <p>Enter Roll Number</p>
+            <input type="text" name="roll_no" placeholder="Enter Roll Number" autocomplete="off"><br>
+            <p>Select Semester</p>
+            <select name="sem_select">
+                <option selected >Select</option>
+                <option value="itsemfirst" >Semester I</option>
+                <option value="itsemsecond">Semester II</option>
+                <option value="itsemthird" >Semester III</option>
+                <option value="itsemfourth">Semester IV</option>
+                <option value="itsemfifth">Semester V</option>
+                <option value="itsemsix">Semester VI</option>
+            </select>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>

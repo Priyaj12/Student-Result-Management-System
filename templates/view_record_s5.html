@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Generate Result</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet'href='/static/AddResult.css'>
+</head>
+<body class="body3" >
+    <table class="t3">
+        <tr>
+            <th class="th1"><a href="{{ url_for('sem5') }}" >Add Student/Result</a></th>
+            <th class="th1"><a href="{{ url_for('viewsem5') }}" >View Record</a></th>
+        </tr>
+    </table>
+    <div>
+        <form method="post">
+        <table border="1" class="view" >
+            <thead>
+                <!-- <th>id</th> -->
+                <th>Name</th>
+                <th>rollnum</th>
+                <th>gender</th>
+                <th>spm</th>
+                <th>pdpract</th>
+                <th>spmint</th>
+                <th>iot</th>
+                <th>iotpract</th>
+                <th>iotint</th>
+                <th>awp</th>
+                <th>awppract</th>
+                <th>awpint</th>
+                <th>lsa</th>
+                <th>lsapract</th>
+                <th>lsaint</th>
+                <th>ej</th>
+                <th>ejpract</th>
+                <th>ejint</th>
+                <th>Total</th>
+                <th>Percentage</th>
+                <th>Grade</th>        
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                <tr>
+                    <td>{{ row.sname }}</td>
+                    <td>{{ row.rollnum }}</td>
+                    <td>{{ row.gender }}</td>
+                    <td>{{ row.spm }}</td>
+                    <td>{{ row.pdpract }}</td>
+                    <td>{{ row.spmint }}</td>
+                    <td>{{ row.iot }}</td>
+                    <td>{{ row.iotpract }}</td>
+                    <td>{{ row.iotint }}</td>
+                    <td>{{ row.awp }}</td>
+                    <td>{{ row.awppract }}</td>
+                    <td>{{ row.awpint }}</td>
+                    <td>{{ row.lsa }}</td>
+                    <td>{{ row.lsapract }}</td>
+                    <td>{{ row.lsaint }}</td>
+                    <td>{{ row.ej }}</td>
+                    <td>{{ row.ejpract }}</td>
+                    <td>{{ row.ejint }}</td>
+                    <td>{{ row.total }}</td>
+                    <td>{{ row.percentage }}</td>
+                    <td>{{ row.grade }}</td>
+                {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+        </form>
+    </div>
+</body>
+</html>

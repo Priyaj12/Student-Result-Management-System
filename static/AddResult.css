@@ -1,0 +1,143 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.body3 .t3{
+    height: 50px ;
+    border: 2px;
+    width: 100% ;
+    border-style: solid;
+    border-color: black;
+    background-color: rgb(62, 62, 183);
+}
+.body3 .t3 .th1{
+    width: 50%;
+    text-align: center;
+    font-size: 25px;
+    border: 1px solid black;
+}
+.body3 .t3 .th1 a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial;
+    font-weight: bolder;
+    transition: 1s ease-in-out;
+}
+.body3 .t3 .th1 a:hover{
+    color: orangered;
+}
+/* Add Student */
+.body3 h3{
+    margin-top: 40px;
+    text-align: center;
+    height: 30px;
+    font-size: 30px;
+}
+
+.body3 .container form .add-details .add{
+    margin-top: 30px;
+}
+.body3 .container form .add-details{
+    display: flex;
+    flex-wrap: wrap;
+}
+form .add-details .add{
+    width: calc(100% / 2 - 0%);
+}
+form .add-details .add input{
+    font-size: 17px;
+    margin-top: 3px;
+    margin-left: 50px;
+    width: 60%;
+    height: 70%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+form .gender-d{
+    margin-top: 30px;
+}
+form .gender-d .gender{
+    margin-top: 10px;
+}
+
+
+
+/* Add Result */
+
+.body3 h4{
+    margin-top: 40px;
+    margin-left: 450px;
+    height: 30px;
+    font-size: 30px;
+}
+
+.body3 .container{
+    margin-left: 15%;
+    font-size: 20px;
+}
+
+.body3 .container form .result-details .sub{
+    margin-top: 30px;
+}
+.body3 .container form .result-details{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+form .result-details .sub{
+    width: calc(100% / 3 - 0%);
+}
+
+form .result-details .sub input{
+    font-size: 17px;
+    margin-top: 3px;
+    margin-left: 50px;
+    width: 50%;
+    height: 70%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+form .btn{
+    height: 45px;
+    margin: 45px ;
+    padding-left: 25%;
+}
+form .btn input{
+    height: 70%;
+    width: 40%;
+    background-color: rgb(62, 62, 183);
+    color: white;
+    font-size: 17px;
+    border: 0px;
+}
+
+/* View Result */
+.view{
+    margin-top: 30px;
+    width: 100% ;  
+}
+
+thead{
+    background: rebeccapurple ;
+}
+thead th{
+    text-align: center;
+    color: aliceblue;
+    height: 50px;    
+}
+
+tbody tr{
+    margin-top: 50px;
+}
+tbody tr td{
+    text-align: center;
+}

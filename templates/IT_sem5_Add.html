@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Generate Result</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet'href='/static/AddResult.css'>
+    <style>
+        #msgdiv{
+            font-size: 25px;
+            color:red;
+        }
+    </style>
+</head>
+<body class="body3" >
+    <div id="msgdiv">{{ msg }}</div>    
+    <table class="t3">
+        <tr>
+            <th class="th1"><a href="{{ url_for('sem5') }}" >Add Student/Result</a></th>
+            <th class="th1"><a href="{{ url_for('viewsem5') }}" >View Record</a></th>
+        </tr>
+    </table>
+    <a href="{{url_for('selectsem')}}" >Back</a>
+    <h3>Add Student</h3>
+    <div class="container">
+        <form method="post">
+            <div class="add-details">
+                <div class="add">
+                    <span class="details">Enter Student Name :</span><br>
+                    <input type="text" name="sname" placeholder="Student Name" autocomplete="off" >
+                </div>
+                <div class="add">
+                    <span class="details">Enter Roll Number :</span><br>
+                    <input type="text" name="rollnum" placeholder="Roll Number" autocomplete="off" >
+                </div> 
+            </div>
+            <div class="gender-d">Gender 
+                <div class="gender">
+                    <input type="radio" name="gender" value="Male">Male &nbsp; &nbsp;
+                    <input type="radio" name="gender" value="Female">Female 
+                </div>
+            </div>
+            <h4>Add Result</h4>
+            <div class="result-details">
+                <div class="sub">
+                    <span class="details">Software Project Management :</span><br>
+                    <input type="text" name="spm" placeholder="Software Project Management" >
+                </div>
+                <div class="sub">
+                    <span class="details">Project Dissertation :</span><br>
+                    <input type="text" name="pdpract" placeholder="Project Dissertation Practical">
+                </div>
+                <div class="sub">
+                    <span class="details">Software Project Management Internal :</span><br>
+                    <input type="text" name="spmint" placeholder="Software Project Management Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Internet of Things :</span><br>
+                    <input type="text" name="iot" placeholder="Internet of Things" >
+                </div> 
+                <div class="sub">
+                    <span class="details">Internet of Things Practical :</span><br>
+                    <input type="text" name="iotpract" placeholder="Internet of Things Practical" >
+                </div>
+                <div class="sub">
+                    <span class="details">Internet of Things Internal :</span><br>
+                    <input type="text" name="iotint" placeholder="Internet of Things Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Advanced Web Programming :</span><br>
+                    <input type="text" name="awp" placeholder="Advanced Web Programming" >
+                </div>
+                <div class="sub">
+                    <span class="details">Advanced Web Programming  Practical :</span><br>
+                    <input type="text" name="awppract" placeholder="Advanced Web Programming Practical" >
+                </div>
+                <div class="sub">
+                    <span class="details">Advanced Web Programming Internal :</span><br>
+                    <input type="text" name="awpint" placeholder="Advanced Web Programming Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Linux System Administration :</span><br>
+                    <input type="text" name="lsa" placeholder="Linux System Administration" >
+                </div>
+                <div class="sub">
+                    <span class="details">Linux System Administration Practical :</span><br>
+                    <input type="text" name="lsapract" placeholder="Linux System Administration Practical" >
+                </div>
+                <div class="sub">
+                    <span class="details">Linux System Administration Internal :</span><br>
+                    <input type="text" name="lsaint" placeholder="Linux System Administration Internal" >
+                </div>
+                <div class="sub">
+                    <span class="details">Enterprise Java :</span><br>
+                    <input type="text" name="ej" placeholder="Enterprise Java" >
+                </div>
+                <div class="sub">
+                    <span class="details">Enterprise Java Practical :</span><br>
+                    <input type="text" name="ejpract" placeholder="Enterprise Java Practical" >
+                </div>
+                <div class="sub">
+                    <span class="details">Enterprise Java Internal :</span><br>
+                    <input type="text" name="ejint" placeholder="Enterprise Java Internal" >
+                </div>
+            </div>
+            <div class="btn">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
